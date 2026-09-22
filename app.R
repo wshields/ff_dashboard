@@ -5,24 +5,12 @@ library(DT)
 library(tidyverse)
 
 # Load in data
-player_stats_season <- read_csv("./data/player_stats_season.csv")
+qb_season_stats <- read_csv("./data/qb_season_stats.csv")
+wr_season_stats <- read_csv("./data/wr_season_stats.csv")
+rb_season_stats <- read_csv("./data/rb_season_stats.csv")
+te_season_stats <- read_csv("./data/te_season_stats.csv")
 
 
-stats_season_qb <- player_stats_season |> 
-  filter(position == "QB") |> 
-  select(all_of(qb_stats))
-
-stats_season_wr <- player_stats_season |> 
-  filter(position == "WR") |> 
-  select(all_of(position_player_stats))
-
-stats_season_rb <- player_stats_season |> 
-  filter(position == "RB") |> 
-  select(all_of(position_player_stats))
-
-stats_season_te <- player_stats_season |> 
-  filter(position == "TE") |> 
-  select(all_of(position_player_stats))
 
 
 ui <- fluidPage(
@@ -59,7 +47,7 @@ ui <- fluidPage(
       
       nav_panel(
         title = "Upcoming Defense",
-        p("Shows the stats of the opposing defense for the week")
+        p("Shows the stats of the selected player's opposing defense for the week")
       )
     )
     
@@ -69,28 +57,28 @@ ui <- fluidPage(
 server <- function(input, output) {
 
     output$QBSummary <- renderDataTable({
-       datatable(stats_season_qb,
+       datatable(qb_season_stats,
                  rownames = FALSE,
                  extensions = "FixedColumns",
                  options = list(scrollX = TRUE, dom = "t",
                                 fixedColumns = list(leftColumns = 1)))
     })
     output$WRSummary <- renderDataTable({
-      datatable(stats_season_wr,
+      datatable(wr_season_stats,
                 rownames = FALSE,
                 extensions = "FixedColumns",
                 options = list(scrollX = TRUE, dom = "t",
                                fixedColumns = list(leftColumns = 1)))
     })
     output$RBSummary <- renderDataTable({
-      datatable(stats_season_rb,
+      datatable(rb_season_stats,
                 rownames = FALSE,
                 extensions = "FixedColumns",
                 options = list(scrollX = TRUE, dom = "t",
                                fixedColumns = list(leftColumns = 1)))
     })
     output$TESummary <- renderDataTable({
-      datatable(stats_season_te,
+      datatable(te_season_stats,
                 rownames = FALSE,
                 extensions = "FixedColumns",
                 options = list(scrollX = TRUE, dom = "t",
