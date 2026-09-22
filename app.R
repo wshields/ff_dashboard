@@ -7,17 +7,6 @@ library(tidyverse)
 # Load in data
 player_stats_season <- read_csv("./data/player_stats_season.csv")
 
-# Stats for each position
-qb_stats <- c("player_name", "completions", "attempts", "passing_yards", "passing_tds", "passing_interceptions",
-             "sacks_suffered", "sack_yards_lost", "sack_fumbles_lost", "passing_yards_after_catch",
-             "passing_cpoe", "pacr", "carries", "rushing_yards", "rushing_tds", "rushing_fumbles",
-             "rushing_epa")
-
-position_player_stats <- c("player_name", "carries", "rushing_yards", "rushing_tds",
-                           "rushing_fumbles", "rushing_epa", "receptions", "targets",
-                           "receiving_yards", "receiving_tds", "receiving_fumbles",
-                           "receiving_yards_after_catch", "receiving_epa", "racr",
-                           "target_share", "air_yards_share", "wopr")
 
 stats_season_qb <- player_stats_season |> 
   filter(position == "QB") |> 

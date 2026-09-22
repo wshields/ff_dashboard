@@ -1,0 +1,5 @@
+week,player_name,carries,rushing_yards,rushing_tds,rushing_fumbles,rushing_epa,receptions,targets,receiving_yards,receiving_tds,receiving_fumbles,receiving_yards_after_catch,receiving_epa,racr,target_share,wopr,avg_cushion,avg_separation,avg_intended_air_yards,percent_share_of_intended_air_yards,avg_yac,avg_expected_yac,avg_yac_above_expectation
+1,G.Kittle,0,0,0,0,NA,2,5,12,0,0,17,-5.5808358415961266,0.3157894736842105,0.14705882352941177,0.39911172522700356,3.3560000000000003,2.1082679030863165,7.209999999999999,23.166891587944217,9.125,7.1307736265785024,1.9942263734214976
+1,A.Barner,0,0,0,0,NA,2,2,13,0,0,14,0.8771314942860045,0,0.08333333333333333,0.12045454545454545,NA,NA,NA,NA,NA,NA,NA
+2,G.Kittle,0,0,0,0,NA,4,4,80,1,0,30,5.767950102279428,1.6,0.19047619047619047,0.4801587301587301,NA,NA,NA,NA,NA,NA,NA
+2,A.Barner,1,1,1,0,2.4609067732817493,1,1,8,0,0,0,0.5301664741709828,1,0.038461538461538464,0.08236191121653677,NA,NA,NA,NA,NA,NA,NA
